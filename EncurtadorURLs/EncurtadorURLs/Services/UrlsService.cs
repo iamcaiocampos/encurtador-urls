@@ -9,6 +9,7 @@ namespace EncurtadorURLs.Services;
 public interface IUrlsService
 {
     Task<UrlItem> CreateShortUrlAsync(string originalUrl);
+    Task<UrlItem?> GetUrlByIdAsync(Guid id);
 }
 
 /// <summary>
@@ -20,6 +21,7 @@ public class UrlsService : IUrlsService
 
     public UrlsService(IUrlContext context)
     {
+        
         _context = context ?? throw new ArgumentNullException(nameof(context));
     }
 
@@ -29,7 +31,12 @@ public class UrlsService : IUrlsService
     /// <remarks>
     /// IMPLEMENTAÇÃO PENDENTE (fase RED do TDD) — será implementada na próxima aula.
     /// </remarks>
-    public Task<UrlItem> CreateShortUrlAsync(string originalUrl)
+    public Task<UrlItem?> CreateShortUrlAsync(string originalUrl)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<UrlItem?> GetUrlByIdAsync(Guid id)
     {
         throw new NotImplementedException();
     }
